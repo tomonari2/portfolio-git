@@ -9,8 +9,10 @@
 
     <body>
         @include('commons.navbar')
+        
         <div>
             
+            @include('commons.error_messages')
             
             
             @yield('content')

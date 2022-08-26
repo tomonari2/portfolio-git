@@ -2,13 +2,15 @@
 
 @section('content')
 
-<h3>{{$user->name}}</h3>
+@include('users.card')
+@include('users.navtabs')
 
-<img src="{{Gravatar::get($user->email)}}">
+@if(Auth::id()==$user->id)
 
+    @include('tweets.form')
 
+@endif
 
-
-
+    @include('tweets.tweets')
 
 @endsection
